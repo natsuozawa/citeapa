@@ -1,0 +1,283 @@
+Cite APA Project Changelog
+By Natsu Ozawa
+
+First number: Public release number
+Second number: Development stage number (UI pre-alpha, logic pre-alpha, alpha, beta, release)
+Third number: Daily build number
+
+-- v 0.0.1 [pre-alpha] -- January 14, 2018
+Integration of HTML/CSS/JS and jQuery
+Single page application setup
+SCSS -> CSS compiler development system integration
+Icon integration
+
+Completion of the start page
+Completion of the information page
+Progress on process.js, managing inter-page transformation
+
+-- v 0.1.1 [pre-alpha] -- January 14, 2018
+Completion of the select menu page
+
+-- v 0.1.2 [pre-alpha] -- January 20, 2018
+Progress on the contributor addition page
+Progress on App.js -> object oriented approach
+
+-- v 0.1.3 [pre-alpha] -- January 21, 2018
+Upgraded jQuery to version 3.1.1
+
+Progress on the contributor addition page
+Progress on contributor.js, powering the page
+
+-- v 0.1.4 [pre-alpha] -- January 22, 2018
+Progress on the contributor addition page
+Progress on contributor.js
+
+-- v 0.1.5 [pre-alpha] -- January 23, 2018
+Progress on App.js
+Progress on process.js
+
+Fixed bugs from v 0.1.4
+	(where the labels would be deleted along the first .input-block child)
+
+-- v 0.1.6 [pre-alpha] -- January 24, 2018
+Progress on App.js
+Progress on process.js
+Completion of contributor addition page
+Completion of contributor.js
+
+Redesign of processing architecture
+
+-- v 0.1.7 [pre-alpha] -- January 25, 2018
+Progress on the other menu page
+Completion of the designation system of the primary type
+Progress on App.scss
+
+-- v 0.1.8 [pre-alpha] -- January 26, 2018
+Completion of the other menu page
+Completion of the secondary type page for
+	Books, Journals, Webpages, Newspapers, Magazines, Reference Books, and Reports
+Progress on process.js
+
+Redesign of processing architecture
+Planned processing paths specifically to manual
+
+Fixed bugs from v 0.1.7
+	(where the back arrow wouldn't work properly with #other)
+
+-- v 0.1.9 [pre-alpha] -- January 27, 2018
+Completion of the format and subtype administration
+Tweaked process.js
+Error checking completed for the secondary type page
+New error checking methods added for the contributor addition page
+Type and subtype specification completed for the contributor addition page
+Completion of the titles and date addition page
+
+Fixed bugs from v 0.0.1
+	(where the back arrow wouldn't work properly after handling #info)
+	(where the .step button would display a black border when clicked)
+Fixed bugs from v 0.1.6
+	(where .error-message would not be displayed after going back)
+
+-- v 0.1.10 [pre-alpha] -- January 29, 2018
+Shortened SCSS
+Combination of small JS files into process.js
+
+Progress on the publication info page
+Progress on process.js
+
+Fixed bugs on Google Chrome from v 0.1.6
+	(where contributor type varification always produced an error)
+Fixed bugs from v 0.1.9
+	(where a faulty select will cause all select to become red on error)
+Changed features from v 0.1.9
+	(date now is optional)
+
+-- v 0.1.11 [pre-alpha] -- February 3, 2018
+Combination of App.js and process.js
+Reworked App.js
+
+Added version history
+Progress on the publication info page
+Progress on App.js
+Type, subtype, and format specification completed for the publication info page
+
+Fixed bugs from v 0.1.10
+	(where empty queries besides that are not in #date were passed)
+
+-- v 0.1.12 [pre-alpha] -- February 7, 2018
+Completion of the publication info page
+Progress on App.js
+
+Fixed bugs from v 0.0.1
+	(where the close icon would not align with the ul)
+
+-- v 0.1.13 [pre-alpha] -- February 10, 2018
+Added console errors
+Progress on the extra page
+
+Fixed bugs from v 0.1.9
+	(where the October selection was duplicated in the menu)
+Fixed bugs from v 0.1.11
+	(where Tools.validateRange was not working properly)
+	(where going back would not reset warnings)
+Fixed bugs from v 0.1.12
+	(where the state query would be evaluated regardless of its visibility)
+	(where the viep error checking was not working properly)
+
+-- v 0.1.14 [pre-alpha] -- February 11, 2018
+Completion of the extra info page
+Completion of the annotation page
+
+-- v 0.1.15 [pre-alpha] -- February 12, 2018
+Progress on the results page
+Copy paste function added for results
+
+Fixed bugs from v 0.1.11
+	(where newspaper pages were evaluated as normal pages)
+
+-- v 0.1.16 [pre-alpha] -- February 16, 2018
+Added a restart feature
+Updated App to prototypal inheritance model
+
+-- v 0.1.17 [pre-alpha] -- February 18, 2018
+Added MIT License
+
+-- v 0.2.1 [pre-alpha] -- February 21, 2018
+Added features to log inputs to the objects with the steps
+
+Fixed bugs from v 0.1.12
+	(where the issue error checking always checked the optional issue box)
+
+-- v 0.2.2 [pre-alpha] -- February 25, 2018
+Added adaptations of different contributor patterns
+Added automatic adjustment of titles
+
+Fixed bugs from v 0.1.1
+	(where the tab header in the info page was overlapping with the scrollbar)
+Fixed bugs from v 0.1.9
+	(where the day option didn't display for magazines)
+
+-- v 0.2.3 [pre-alpha] -- February 26, 2018
+Added tools for transformation of data into appropriate formats
+Added system to register data to be processed by the citation creator while not mutating the original data object
+Added more hints to eliminate confusion
+Added unsupported features clarification
+
+-- v 0.2.4 [pre-alpha] -- March 1, 2018
+Progress on the citation build process
+
+Fixed bugs from v 0.1.16
+	(where restarting would not cause the previous display options to be reset)
+
+-- v 0.2.5 [pre-alpha] -- March 3, 2018
+Integrated git version control
+Organized citation build process
+Progress on the citation build process
+Change in how the edition query behaves
+
+Fixed bugs from v 0.2.1
+	(where the issue entry was not recorded in some occasions)
+
+-- v 0.2.6 [pre-alpha] -- March 4, 2018
+Fixed bugs from v 0.1.12 and v 0.2.4
+	(where report number is forced)
+Fixed bugs from v 0.2.1
+	(where the country name for international publishers was not recorded)
+Fixed bugs from v 0.2.4
+	(where an undefined author would cause the title to be included twice without necessary publication information)
+Fixed bugs from v 0.2.5
+	(where the parentheses for publication information showed up when there was nothing contain)
+
+-- v 0.2.7 [pre-alpha] -- March 8, 2018
+Added noscript banner
+Adapted to a pseudoclassical approach of object construction in the citation creation process
+Removed EdTrans feature (useless, complicates process)
+Progress on the citation build process
+
+-- v 0.2.8 [pre-alpha] -- March 9, 2018
+Modified images for performance (separate commit)
+Changed to console errors (from logs)
+Worked on documentation of data
+Completed the citation build process
+
+Fixed bugs from v 0.1.9
+	(where printed references could be checked as likely to change over time)
+Fixed bugs from v 0.2.1
+	(where n.d. would not be displayed in place of no date)
+	(where pages were required for books and references)
+Fixed bugs from v 0.2.7
+	(where title would be included twice)
+	(where the title would not be italicized in some cases)
+	(where empty publication were sent as arrays)
+
+-- v 0.3.0 [alpha] -- March 9, 2018
+First alpha version
+
+-- v 0.3.1 [alpha] -- March 10, 2018
+Addressed a minor issue on Google Chrome, where focused text inputs were unintentionally highlighted.
+Addressed an issue from v 0.1.6 where removing the first contributor also removed the suffix of the following contributor.
+Addressed a minor issue from v 0.1.12 where an invalid State error was returned for an empty State query.
+Addressed an issue from v 0.1.14 where error checking caused hints to disappear in the extra page.
+Addressed an issue from v 0.1.16 where restarting did not reset the entered data.
+Addressed other very minor issues.
+
+Merged the APA and Help panels together for more simplicity.
+Added a Settings panel.
+Started implementing the autosave feature.
+
+-- v 0.3.2 [alpha] -- March 11, 2018
+Addressed an issue from v 0.1.12 where a question with no answer field appeared for reports.
+Addressed an issue from v 0.1.12 where the issue number disappeared in some cases.
+Addressed an issue from v 0.3.1 where navigation from annotation did not behave properly in some cases.
+Addressed an issue from v 0.3.1 where volume and edition queries were not marked optional for references.
+Addressed other very minor issues.
+
+Completed implementing the autosave feature. With autosave, the page will be back just as you left it.
+
+-- v 0.3.3 [alpha] -- March 13, 2018
+Addressed an issue from v 0.1.12 where page numbers were not asked to enter for abstracts.
+Addressed a critical issue from v 0.3.1 where the contributor page deleted necessary information.
+Addressed an issue from v 0.3.1 where contributors were not logged in some cases.
+Addressed an issue from v 0.3.1 where restarting did not reset annotations.
+Addressed a critical issue from v 0.3.2 where the page did not display for new users.
+Addressed a critical issue from v 0.3.2 where saved data was overwritten.
+Addressed an issue from v 0.3.2 where date was not saved properly with autosave.
+Addressed an issue from v 0.3.2 where the extra page was not behaving properly.
+Addressed an issue from v 0.3.2 where the volume, issue, and edition boxes were not marked optional after loading autosave information.
+Addressed an issue from v 0.3.2 where contributor type was not loaded properly in some cases.
+Addressed an issue from v 0.3.2 where contributors were not saved properly after enabling autosave.
+Addressed an issue from v 0.3.2 where the application did not initialize pages when the info page was to be loaded.
+Addressed an issue from v 0.3.2 where the country name for international publishers was not loaded from autosave.
+Addressed an issue from v 0.3.2 where today's date for retrieval date was not automatically loading in some cases.
+Addressed an issue from v 0.3.2 where users were not redirected to the correct info tab after loading from autosave.
+Addressed an issue from v 0.3.2 where the user's selection in the other page was not saved with autosave.
+
+Added a manual edit feature to edit the final citation if needed.
+
+Modified the styling on the copy button in the result page.
+Modified the styling of hint boxes.
+
+-- v 0.3.4 [alpha] -- March 14, 2018
+Addressed an issue where the close button was not rendered correctly in smaller screens.
+Addressed a critical issue from 0.2.8 where authored reports with a url were cited incorrectly.
+
+-- v 1.0.0 -- March 17, 2018
+Addressed an issue where the headings overlapped with the nav bar in smaller screens.
+
+Added an alert for Internet Explorer users.
+
+-- v 1.0.1 -- March 31, 2018
+Transpiled to ES5.
+Minified program for better performance.
+
+-- v 1.0.2 -- April 7, 2018
+Addressed a critical issue from v 1.0.1 where an error prevented the creation of the final citation.
+Addressed a critical issue from v 1.0.1 where an error prevented the user from advancing past the publication page.
+
+-- v 1.0.3 -- July 22, 2018
+Addressed a critical issue where hovered versions of images did not load.
+Made images lightweight by converting to SVG.
+Addressed an issue where field labels were deleted sometimes in the contributor page.
+
+-- v 1.0.4 -- August 13, 2018
+Addressed an issue from v 0.1.12 where page numbers were required for digitally published journals.

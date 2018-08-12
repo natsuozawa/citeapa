@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cite APA</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cite anything in APA.">
+  <meta name="author" content="Natsu Ozawa">
+  <meta name="keywords" content="APA, citation, cite, APA citation">
+  <link href="thumbnail/logo.png" rel="icon">
+  <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded:100,200,300,400" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="lib/app.css">
+</head>
+<body>
+  <div id="start" class="page">
+    <div class="info"></div>
+    <div class="container">
+      <h1>Cite APA</h1>
+      <p>Your trustable tool for APA citation.</p>
+      <button class="step">Create new citation</button>
+    </div>
+  </div>
+  <script>
+  //backgrund image randomization
+  var img = 'url("thumbnail/background' + Math.floor(Math.random() * 7 + 1) + '.jpg")';
+  document.querySelector('body').style.backgroundImage = img;
+  </script>
+  <noscript style="position: fixed; padding: 12px; width: 100%; text-align: center; font-size: 24px; font-weight: 400; background-color: rgba(0, 0, 0, 0.4)">Javascript is disabled in your browser. You need to enable it first.</noscript>
+  <div id="info" class="page">
+    <div id="tab">
+      <div class="close"></div>
+      <ul>
+        <li>APA</li>
+        <li>About</li>
+        <li>Version</li>
+        <li>Settings</li>
+      </ul>
+    </div>
+    <div id="content">
+      <div>
+        <h2>What is APA?</h2>
+        <p>The American Psychological Association (APA) is the largest scientific and professional organization of psychologists in the United States.</p>
+        <p class="note">--from Wikipedia</p>
+        <h2>What is APA style?</h2>
+        <p>APA Style® originated in 1929, when a group of psychologists, anthropologists, and business managers convened and sought to establish a simple set of procedures, or style rules, that would codify the many components of scientific writing to increase the ease of reading comprehension.</p>
+        <p>As with other editorial styles, APA Style consists of rules or guidelines that a publisher observes to ensure clear and consistent presentation of written material. It concerns uniform use of such elements as:</p>
+        <ul>
+          <li>selection of headings, tone, and length</li>
+          <li>punctuation and abbreviations</li>
+          <li>presentation of numbers and statistics</li>
+          <li>construction of tables and figures, citation of references</li>
+          <li>many other elements that are a part of a manuscript</li>
+        </ul>
+        <p class="note">--from apastyle.org</p>
+        <h2>Resources</h2>
+        <p>If you are stuck, you can use these resources to help you in your citation.</p>
+        <ul>
+          <li><a href="http://www.apastyle.org/learn/index.aspx" target="_blank">Learning APA Style</a></li>
+          <li><a href="https://owl.english.purdue.edu/owl/resource/560/01/" target="_blank">Purdue Owl</a></li>
+        </ul>
+        <p>You may also want to refer to the Publication Manual of the American Psychological Association.</p>
+      </div>
+      <div>
+        <h2>About Cite APA</h2>
+        <p>Cite APA is a web application created to make citation easy and accurate. This application is built in accordance with the 6th edition of the Publication Mannual of the American Psychological Association.</p>
+        <p>Designed and developed by Natsu Ozawa. Tokyo, Japan. 2018.</p>
+        <h2>MIT License</h2>
+        <p>Copyright 2018 Natsu Ozawa</p>
+        <p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+        <p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+        <p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+        <h2>Notices</h2>
+        <p>This application is built for modern web browsers. Some features on this application may not available for some outdated browsers. Please use the latest version of Google Chrome or Firefox if you are encountering any problems with displaying the content.</p>
+        <p>This website uses jQuery to enhance user experience:</p>
+        <p>jQuery v3.3.1 | (c) JS Foundation and other contributors | jquery.org/license</p>
+        <p>White and gray icons are taken from: iconmonstr.com</p>
+        <p>Background images are taken from: pixabay.com</p>
+        <p>Slider switches are modified and taken from: w3schools.com</p>
+        <p>This application uses the Encode Sans font from Google Fonts.</p>
+      </div>
+      <div>
+        <h2>Current Version</h2>
+        <p>Version 1.0.4</p>
+        <p>Type: MINOR RELEASE</p>
+        <p>Released Aug 13, 2018</p>
+        <h2>Version History</h2>
+        <h3>v 1.0.4 - August 13, 2018</h3>
+        <p>Addressed an issue from v 0.1.12 where page numbers were required for digitally published journals.</p>
+        <h3>v 1.0.3 - July 22, 2018</h3>
+        <p>Addressed a critical issue where hovered versions of images did not load.</p>
+        <p>Made images lightweight by converting to SVG.</p>
+        <h3>v 1.0.2 - April 7, 2018</h3>
+        <p>Addressed a critical issue from v 1.0.1 where an error prevented the creation of the final citation.</p>
+        <p>Addressed a critical issue from v 1.0.1 where an error prevented the user from advancing past the publication page.</p>
+        <h3>v 1.0.1 - March 31, 2018</h3>
+        <p>Transpiled program in to ES5 and minified for performance.</p>
+        <h3>v 1.0.0 - March 17, 2018</h3>
+        <p>Addressed an issue where the headings overlapped with the nav bar in smaller screens.</p>
+        <p>Added an alert for Internet Explorer users.</p>
+        <h3>v 0.3.4 [alpha] - March 14, 2018</h3>
+        <p>Addressed an issue where the close button was not rendered correctly in smaller screens.</p>
+        <p>Addressed a critical issue from 0.2.8 where authored reports with a url were cited incorrectly.</p>
+        <h3>v 0.3.3 [alpha] - March 13, 2018</h3>
+        <p>Addressed an issue from v 0.1.12 where page numbers were not asked to enter for abstracts.</p>
+        <p>Addressed a critical issue from v 0.3.1 where the contributor page deleted necessary information.</p>
+        <p>Addressed an issue from v 0.3.1 where contributors were not logged in some cases.</p>
+        <p>Addressed an issue from v 0.3.1 where restarting did not reset annotations.</p>
+        <p>Addressed a critical issue from v 0.3.2 where the page did not display for new users.</p>
+        <p>Addressed a critical issue from v 0.3.2 where saved data was overwritten.</p>
+        <p>Addressed an issue from v 0.3.2 where date was not saved properly with autosave.</p>
+        <p>Addressed an issue from v 0.3.2 where the extra page was not behaving properly.</p>
+        <p>Addressed an issue from v 0.3.2 where the volume, issue, and edition boxes were not marked optional after loading autosave information.</p>
+        <p>Addressed an issue from v 0.3.2 where contributor type was not loaded properly in some cases.</p>
+        <p>Addressed an issue from v 0.3.2 where contributors were not saved properly after enabling autosave.</p>
+        <p>Addressed an issue from v 0.3.2 where the application did not initialize pages when the info page was to be loaded.</p>
+        <p>Addressed an issue from v 0.3.2 where the country name for international publishers was not loaded from autosave.</p>
+        <p>Addressed an issue from v 0.3.2 where today's date for retrieval date was not automatically loading in some cases.</p>
+        <p>Addressed an issue from v 0.3.2 where users were not redirected to the correct info tab after loading from autosave.</p>
+        <p>Addressed an issue from v 0.3.2 where the user's selection in the other page was not saved with autosave.</p>
+        <p>Added a manual edit feature to edit the final citation if needed.</p>
+        <p>Modified the styling on the copy button in the result page.</p>
+        <p>Modified the styling of hint boxes.</p>
+        <h3>v 0.3.2 [alpha] - March 11, 2018</h3>
+        <p>Addressed an issue from v 0.1.12 where a question with no answer field appeared for reports.</p>
+        <p>Addressed an issue from v 0.1.12 where the issue number disappeared in some cases.</p>
+        <p>Addressed an issue from v 0.3.1 where navigation from annotation did not behave properly in some cases.</p>
+        <p>Addressed an issue from v 0.3.1 where volume and edition queries were not marked optional for references.</p>
+        <p>Addressed other very minor issues.</p>
+        <p>Completed implementing the autosave feature. With autosave, the page will be back just as you left it.</p>
+        <h3>v 0.3.1 [alpha] - March 10, 2018</h3>
+        <p>Addressed a minor issue on Google Chrome, where focused text inputs were unintentionally highlighted.</p>
+        <p>Addressed an issue from v 0.1.6 where removing the first contributor also removed the suffix of the following contributor.</p>
+        <p>Addressed a minor issue from v 0.1.12 where an invalid State error was returned for an empty State query.</p>
+        <p>Addressed an issue from v 0.1.14 where error checking caused hints to disappear in the extra page.</p>
+        <p>Addressed an issue from v 0.1.16 where restarting did not reset the entered data.</p>
+        <p>Addressed other very minor issues.</p>
+        <p>Merged the APA and Help panels together for more simplicity.</p>
+        <p>Added a Settings panel.</p>
+        <h3>v 0.2.8 [pre-alpha] - March 9, 2018</h3>
+        <p>Modified images for better performance.</p>
+        <p>Integrated local git version control.</p>
+        <p>Enhanced UI.</p>
+        <p>Completed citation build process.</p>
+        <h3>v 0.1.17 [pre-alpha] - February 18, 2018</h3>
+        <p>Completed the interactive UI.</p>
+        <p>Added error checking.</p>
+        <p>Added MIT Licensing.</p>
+        <h3>v 0.0.1 [pre-alpha] - January 14, 2018</h3>
+        <p>Created the single page application setup.</p>
+        <p>Completed the start and information pages.</p>
+        <h2>Unsupported features</h2>
+        <p>These formats are being planned for support in future versions: in press articles, conference proceedings, master's theses, doctoral dissertations, reviews, and peer commentaries.</p>
+        <p>These formats are not going to be supported in the near future: media, unpublished/missing works, legal sources, newsletters, multi-volume works, series, monologues, and more exceptions to the rule.</p>
+        <p>Please report all bugs to author on GitHub.</p>
+      </div>
+      <div>
+        <h2>Settings</h2>
+        <div class="input-block">
+          <label class="switch">
+            <input type="checkbox" name="autosave" checked>
+            <span class="slider"></span>
+          </label>
+          <label>Autosave</label>
+        </div>
+        <p class="detail">When autosave is on, your data will be stored in your local storage. When you come back, any work you left will still be there. Note: this feature will not store data after your browsing session in incognito/private mode.</p>
+        <button>Reset saved data</button>
+      </div>
+    </div>
+  </div>
+  <div id="select" class="page">
+    <div class="info"></div>
+    <div class="back"></div>
+    <div class="container">
+      <h1>What are you going to cite?</h1>
+      <div class="block">
+        <div class="box">
+          <div>
+            <h2>Book</h2>
+            <img src="thumbnail/book.svg">
+          </div>
+        </div>
+        <div class="box">
+          <div>
+            <h2>Journal</h2>
+            <img src="thumbnail/journal.svg">
+          </div>
+        </div>
+        <div class="box">
+          <div>
+            <h2>Webpage</h2>
+            <img src="thumbnail/webpage.svg">
+          </div>
+        </div>
+        <div class="box">
+          <div>
+            <h2>Other</h2>
+            <img src="thumbnail/menu.svg">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="other" class="page">
+    <div class="info"></div>
+    <div class="back"></div>
+    <div class="forward"></div>
+    <div class="hint"></div>
+    <div class="hint-box">
+      <p>Don't worry about being specific yet, there will be a second prompt.</p>
+    </div>
+    <div class="container">
+      <h1>Please select an option.</h1>
+      <select name="source">
+        <option value="newspaper">Newspaper</option>
+        <option value="magazine">Magazine</option>
+        <option value="journal">Journal</option>
+        <option value="book">Book</option>
+        <option value="reference">Reference (Encyclopedia, Dictionary)</option>
+        <option value="webpage">Webpage</option>
+        <option value="report">Report</option>
+    <!--    <option value="proceedings">Proceedings</option>
+        <option value="dissertation">Dissertation, Thesis</option>
+        <option value="review">Review, Peer Commentary</option>
+        <option value="media">Media</option> -->
+      </select>
+      <button class="step">Next ></button>
+    </div>
+  </div>
+  <div id="second" class="page">
+    <div class="info"></div>
+    <div class="back"></div>
+    <div class="forward"></div>
+    <div class="container">
+      <div id="print-digital" class="entry">
+        <h2>Please choose the format:</h2>
+        <div class="block">
+          <div>
+            <input type="radio" name="print-digital" value="print">
+            <label>Print</label>
+          </div>
+          <div>
+            <input type="radio" name="print-digital" value="digital">
+            <label>Digital</label>
+          </div>
+        </div>
+      </div>
+      <div id="print-ebook-online" class="entry">
+        <h2>Please choose the format:</h2>
+        <div class="block">
+          <div>
+            <input type="radio" name="print-ebook-online" value="print">
+            <label>Print</label>
+          </div>
+          <div>
+            <input type="radio" name="print-ebook-online" value="ebook">
+            <label>Ebook</label>
+          </div>
+          <div>
+            <input type="radio" name="print-ebook-online" value="digital">
+            <label>Online</label>
+          </div>
+        </div>
+      </div>
+      <div id="wiki" class="entry">
+        <h2>Is this source likely to change over time?</h2>
+        <div class="block">
+          <div>
+            <input type="radio" name="wiki" value="change-true">
+            <label>Yes</label>
+          </div>
+          <div>
+            <input type="radio" name="wiki" value="change-false">
+            <label>No</label>
+          </div>
+        </div>
+      </div>
+      <div id="chapter-entire" class="entry">
+        <h2>Will you cite a chapter or section, or the entire book?</h2>
+        <div class="block">
+          <div>
+            <input type="radio" name="chapter-entire" value="chapter">
+            <label>Chapter (Section)</label>
+          </div>
+          <div>
+            <input type="radio" name="chapter-entire" value="entire">
+            <label>Entire Book</label>
+          </div>
+        </div>
+      </div>
+      <div id="journal" class="entry">
+        <h2>What will you cite? Please select one that applies.</h2>
+        <div class="block">
+          <div>
+            <input type="radio" name="journal" value="article">
+            <label>Journal Article</label>
+          </div>
+          <div>
+            <input type="radio" name="journal" value="advance">
+            <label>Advance Release</label>
+          </div>
+          <div>
+            <input type="radio" name="journal" value="sp-issue">
+            <label>Special Issue</label>
+          </div>
+          <div>
+            <input type="radio" name="journal" value="sp-section">
+            <label>Special Section</label>
+          </div>
+          <div>
+            <input type="radio" name="journal" value="abstract">
+            <label>Abstract</label>
+          </div>
+        </div>
+      </div>
+      <p class="error-message">Only digital versions change over time.</p>
+      <button class="step">Next ></button>
+    </div>
+  </div>
+  <div id="contributor" class="page">
+    <div class="info"></div>
+    <div class="back"></div>
+    <div class="forward"></div>
+    <div class="hint"></div>
+    <div class="hint-box">
+      <p>If authored by an organization, write the organization's full name under Last Name.</p>
+      <p>Omit the suffix for contributors with academic and professional titles.</p>
+    </div>
+    <div class="container">
+      <h1>Please add any contributors</h1>
+      <p class="message">---<br>Leave blank if there are no authors</p>
+      <p class="error-message">There was an error with the request. Please redo the highlighted fields.</p>
+      <div class="block">
+        <div class="input-block">
+          <div>
+            <select name="type">
+              <option class="author" value="author">Author</option>
+              <option class="editor" value="editor">Editor</option>
+              <option class="translator" value="translator">Translator</option>
+            </select>
+          </div>
+          <div>
+            <label>F.I.</label>
+            <input class="first" size="1" maxlength="1" type="text">
+          </div>
+          <div>
+            <label>M.I.</label>
+            <input class="middle" size="1" maxlength="1" type="text">
+          </div>
+          <div>
+            <label>Last Name</label>
+            <input class="last" type="text">
+          </div>
+          <div>
+            <label>Suffix</label>
+            <input class="suffix" type="text">
+          </div>
+          <div class="minus"></div>
+        </div>
+      </div>
+      <div class="plus"></div>
+      <button class="step">Next ></button>
+    </div>
+  </div>
+  <div id="title-date" class="page">
+    <div class="info"></div>
+    <div class="back"></div>
+    <div class="forward"></div>
+    <div class="hint"></div>
+    <div class="hint-box">
+      <p>For source titles, only capitalize the first word, the first letter after a colon or dash, and proper nouns, like in a normal sentence.</p>
+      <p>If the source is not written in English, enter the title in the original language, then provide an English translation of the title inside a [ ].</p>
+    </div>
+    <div class="container">
+      <div id="section-title" class="entry">
+        <h2>What is the title of the chapter or entry?</h2>
+        <p class="message">---<br>Make sure to use <a>sentence capitalization.</a></p>
+        <input type="text" placeholder="Write like this">
+      </div>
+      <div id="source-title" class="entry">
+        <h2>What is the title of the source?</h2>
+        <p class="message">---<br>Make sure to use <a>sentence capitalization.</a></p>
+        <input type="text" placeholder="Write like this">
+      </div>
+      <div id="periodical" class="entry">
+        <h2>What is the name of the periodical?</h2>
+        <p class="message">---<br>Always capitalize every word, except articles, conjunctions, and prepositions.<p>
+        <input type="text" placeholder="Write Like This">
+      </div>
+      <div id="date" class="entry">
+        <h2>When was the source published?</h2>
+        <p class="message">---<br>Leave blank if not known.</p>
+        <div class="input-block">
+          <select name="month">
+            <option value="n.d.">Select...</option>
+            <option value="January">January</option>
+            <option value="February">February</option>
+            <option value="March">March</option>
+            <option value="April">April</option>
+            <option value="May">May</option>
+            <option value="June">June</option>
+            <option vaue="July">July</option>
+            <option value="August">August</option>
+            <option value="September">September</option>
+            <option value="October">October</option>
+            <option value="November">November</option>
+            <option value="December">December</option>
+            <option value="Spring">Spring</option>
+            <option value="Summer">Summer</option>
+            <option value="Fall">Fall</option>
+            <option value="Winter">Winter</option>
+          </select>
+          <input name="day" type="text" size="2" maxlength="2" placeholder="DD">
+          <input name="year" type="text" size="4" maxlength="4" placeholder="YYYY">
+        </div>
+      </div>
+      <p class="error-message">Please make sure that your information is correct.</p>
+      <button class="step">Next ></button>
+    </div>
+  </div>
+  <div id="publication" class="page">
+    <div class="info"></div>
+    <div class="back"></div>
+    <div class="forward"></div>
+    <div class="hint"></div>
+    <div class="hint-box"></div>
+    <div class="container">
+      <div id="publisher" class="entry">
+        <h2>Please fill out information about the publisher.</h2>
+        <div class="block">
+          <div class="input-block">
+            <label>Name:</label>
+            <input name="publisher-name" type="text">
+          </div>
+          <div class="input-block">
+            <div>
+              <input type="radio" name="location" value="state">
+              <label>US or Canada</label>
+            </div>
+            <div>
+              <input type="radio" name="location" value="international">
+              <label>Outside of US and Canada</label>
+            </div>
+          </div>
+          <div class="input-block">
+            <label>Location:</label>
+            <input name="city" type="text" placeholder="City">
+            <input name="state" type="text" size="2" maxlength="2" placeholder="ST">
+            <input name="country" type="text" placeholder="Country">
+          </div>
+        </div>
+      </div>
+      <div id="doi-url" class="entry">
+        <h2>Please provide a DOI or URL of your source.</h2>
+        <p class="message">---<br>A DOI is preferred.</p>
+        <div class="block">
+          <div class="input-block">
+            <div>
+              <input type="radio" name="doi-url" value="doi">
+              <label>DOI</label>
+            </div>
+            <div>
+              <input type="radio" name="doi-url" value="url">
+              <label>URL</label>
+            </div>
+          </div>
+          <div class="input-block">
+            <input type="text" name="doi" placeholder="doi">
+            <input type="text" name="url" placeholder="url">
+          </div>
+        </div>
+      </div>
+      <div id="url" class="entry">
+        <h2>Please provide a URL of your source.</h2>
+        <div class="block input-block">
+          <input type="text" name="url" placeholder="url">
+        </div>
+      </div>
+      <div id="viep" class="entry">
+        <h2>Please provide further information about your source.</h2>
+        <p class="message">---<br>Optional entries are highlighted in blue.</p>
+        <div class="block">
+          <div class="input-block">
+            <div>
+              <label>Volume</label>
+              <input type="text" name="vol" placeholder="#">
+            </div>
+            <div>
+              <label><a>Issue</a></label>
+              <input type="text" name="issue" placeholder="#">
+            </div>
+            <div>
+              <label>Issue</label>
+              <input type="text" name="issue" placeholder="#">
+            </div>
+            <div>
+              <label>Edition</label>
+              <input type="text" name="ed" placeholder="#th">
+            </div>
+            <div>
+              <label>Page(s)</label>
+              <input type="text" name="pp" placeholder="##-##">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="report-no" class="entry">
+        <h2>If given, please provide a report number.</h2>
+        <div class="block input-block">
+          <input type="text" name="report-no" placeholder="Name of No. ###">
+        </div>
+      </div>
+      <p class="error-message">Please check that your entry is correct.</p>
+      <button class="step">Next ></button>
+    </div>
+  </div>
+  <div id="extra" class="page">
+    <div class="info"></div>
+    <div class="back"></div>
+    <div class="forward"></div>
+    <div class="hint"></div>
+    <div class="hint-box">
+      <p>If edition is not available, go back and select "Online" as the format.</p>
+    </div>
+    <div class="container">
+      <div id="retrieval-date" class="entry">
+        <h2>When was the source accessed?</h2>
+        <div class="input-block">
+          <select name="month">
+            <option value="January">January</option>
+            <option value="February">February</option>
+            <option value="March">March</option>
+            <option value="April">April</option>
+            <option value="May">May</option>
+            <option value="June">June</option>
+            <option vaue="July">July</option>
+            <option value="August">August</option>
+            <option value="September">September</option>
+            <option value="October">October</option>
+            <option value="November">November</option>
+            <option value="December">December</option>
+          </select>
+          <input name="day" type="text" size="2" maxlength="2" placeholder="DD">
+          <input name="year" type="text" size="4" maxlength="4" placeholder="YYYY">
+        </div>
+      </div>
+      <div id="ebook-version" class="entry">
+        <h2>What is the version of the ebook?</h2>
+        <p class="message">---<br>e.g. Adobe Digitals Edition version</p>
+        <input name="version" type="text" placeholder="XXXX version">
+      </div>
+      <div id="website-name" class="entry">
+        <h2>Where is the report published? (Name of the website)</h2>
+        <p class="message">---<br>Leave blank if the author is the publisher.</p>
+        <input name="website-name" type="text" placeholder = "Name of Publisher">
+      </div>
+      <p class="error-message">Please make sure that your information is correct.</p>
+      <button class="step">Next ></button>
+    </div>
+  </div>
+  <div id="annotation" class="page">
+    <div class="info"></div>
+    <div class="back"></div>
+    <div class="forward"></div>
+    <div class="container">
+      <h1>Please add any annotations.</h1>
+      <p class="message">---<br>This is optional.</p>
+      <textarea name="annotation"></textarea>
+      <button class="step">Next ></button>
+    </div>
+  </div>
+  <div id="result" class="page">
+    <div class="info"></div>
+    <div class="back"></div>
+    <div class="restart"></div>
+    <div class="container">
+      <h1>Here is your citation!</h1>
+      <p class="message">---<br>Make sure to indent five spaces on every line except the first.</p>
+      <div id="result-box">
+        <p id="citation">Result will <i>appear</i> here.</p>
+      </div>
+      <div class="button-container">
+        <button class="step">Copy</button>
+        <button class="step">Edit ></button>
+      </div>
+    </div>
+  </div>
+  <div id="edit" class="page">
+    <div class="info"></div>
+    <div class="back"></div>
+    <div class="restart"></div>
+    <div class="hint"></div>
+    <div class="hint-box">
+      <p>Text wrapped between &lt;i&gt;&lt;/i&gt; will be in <i>italics</i>.</p>
+    </div>
+    <div class="container">
+      <h1>Manually edit your citation</h1>
+      <p class="message">---<br>Changes will only be reflected in your final citation.</p>
+      <textarea></textarea>
+      <button class="step">Save ></button>
+    </div>
+  </div>
+  <script>
+    if(navigator.userAgent.indexOf('MSIE')!==-1 || navigator.appVersion.indexOf('Trident/') > 0){
+      alert('It looks like you are using Internet Explorer. Unfortunately, outdated browsers are not supported in this application. Please use Google Chrome or Firefox for the best experience.');
+    }
+  </script>
+  <script src="source/jquery.min.js"></script>
+  <script src="lib/app.min.js"></script>
+</body>
+</html>
