@@ -4,7 +4,7 @@ Create a citation referencing a work to include in the **references** section of
 
 For more information about this software, see [README.md](./README.md)
 
-To start the program, click [here](./lib/app.html).
+To start the program, click [here](https://citeapa.js.org).
 
 **This is the technical documentation of the program, for further development and debugging. For practical use, please see [README.md](./README.md)**
 
@@ -13,18 +13,14 @@ To start the program, click [here](./lib/app.html).
 | Cite APA
   | .git [invisible] (contains git information)
   | lib (contains source files of program)
-    | .sass-cache [GITIGNORED]
-    - app.css (SCSS compile output)
-    - app.css.map (SCSS compile map)
-    - app.html (document)
+    - app.css (compiled output of app.scss)
     - app.js
-    - app.scss (refer to this file)
+    - app.min.js (minifed app.js)
+    - app.scss 
   | source
     - jquery.min.js
   | thumbnail
-    | full [GITIGNORED] (original, full size images not used)
-    - back-hover.png (hover icon)
-    - back.png (icon)
+    - back.svg (icon)
     - background1.png (background)
     - background2.png (background)
     - background3.png (background)
@@ -32,31 +28,22 @@ To start the program, click [here](./lib/app.html).
     - background5.png (background)
     - background6.png (background)
     - background7.png (background)
-    - book.png (icon)
-    - close-hover.png (hover icon)
-    - close.png (icon)
-    - forward-hover.png (hover icon)
-    - forward.png (icon)
-    - hint-hover.png (hover icon)
-    - hint.png (icon)
-    - info-hover.png (hover icon)
-    - info.png (icon)
-    - journal.png (icon)
+    - book.svg (icon)
+    - close.svg (icon)
+    - forward.svg (icon)
+    - hint.svg (icon)
+    - journal.svg (icon)
     - logo.png (page icon)
-    - minus-hover.png (hover icon)
-    - minus.png (icon)
-    - more-hover.png (hover icon)
-    - more.png (icon)
-    - plus-hover.png (hover icon)
-    - plus.png (icon)
-    - reload-hover.png (hover icon)
-    - reload.png (icon)
-    - webpage.png (icon)
-  - .gitignore (contains git information)
+    - menu.svg
+    - minus.svg (icon)
+    - plus.svg (icon)
+    - reload.svg (icon)
+    - webpage.svg (icon)
+  - .gitignore
   - changelog.txt
+  - CNAME
   - documentation.md [THIS FILE]
-  - instructions.txt (instructions to run)
-  - license.txt (MIT license)
+  - LICENSE
   - README.md
 ```
 
@@ -64,7 +51,7 @@ To start the program, click [here](./lib/app.html).
 This application uses `HTML` / `CSS (SCSS)` / `JavaScript (ES6, jQuery)`.
 
 ### UI
-The application has a simplistic UI that goes through each step for the user to enter information. Every page is a `page` class HTML div, which is controlled by `App.js`.
+The application has a simplistic UI that goes through each step for the user to enter information. Every page is a `page` class HTML div, which is controlled by `app.js`.
 
 #### UI Overview
 * `#start` - Start page with title, subtitle, and "create citation" button.
@@ -108,7 +95,7 @@ undo();
 ```
 
 ### App
-`App` is an object that stores all of the data entered by the browser to the UI. App is created at runtime by a pseudoclassical constructor function named `Preset` in `App.js`.
+`App` is an object that stores all of the data entered by the browser to the UI. App is created at runtime by a pseudoclassical constructor function named `Preset` in `app.js`.
 
 #### App properties - default set by `Preset`
 ```javascript
@@ -222,7 +209,7 @@ addTranslator(last, fi, mi, sfx);
 ```
 
 ### components
-Components is an object created by a pseudoclassical constructor function `CreateComponents` in `App.js` from the `App` object, which is called in the transition between `#annotation` and `#result`. Hence, this object is only created in the last step, when all of the information is ready.
+Components is an object created by a pseudoclassical constructor function `CreateComponents` in `app.js` from the `App` object, which is called in the transition between `#annotation` and `#result`. Hence, this object is only created in the last step, when all of the information is ready.
 In the process of building the citation, the program may use the following properties from `components`.
 ```javascript
 contributor = App.author, App.editor;
@@ -255,7 +242,7 @@ annotations = App.annotation
 
 ### Miscellaneous
 #### Tools
-Tools is an object used in `App.js` to store common functions, such as parenthesize.
+Tools is an object used in `app.js` to store common functions, such as parenthesize.
 
 #### Errors
-Errors is an object in `App.js` to conveniently store error messages.
+Errors is an object in `app.js` to conveniently store error messages.
