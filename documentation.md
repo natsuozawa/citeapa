@@ -12,12 +12,12 @@ To start the program, click [here](https://citeapa.js.org).
 ```
 | Cite APA
   | .git [invisible] (contains git information)
-  | lib (contains source files of program)
+  | src (contains source files of program)
     - app.css (compiled output of app.scss)
     - app.js
     - app.min.js (minifed app.js)
     - app.scss 
-  | source
+  | lib (contains external libraries)
     - jquery.min.js
   | thumbnail
     - back.svg (icon)
