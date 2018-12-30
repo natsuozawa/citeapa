@@ -110,6 +110,7 @@ input[type="text"] {
 	background-color: rgba(255, 255, 255, 0.8);
 	border-bottom: solid transparent 2px;
 	font-size: 18px;
+	padding: 5px;
 }
 
 input[type="text"]:focus, select:focus {
@@ -444,9 +445,20 @@ textarea {
 				vertical-align: middle;
 			}
 
-			label:not(.switch) {
-				font-size: 24px;
+			label.switch-label {
 				margin-left: 20px;
+			}
+
+			label:not(.switch) {
+				font-size: 18px;
+			}
+
+			input[type="text"] {
+				text-align: center;
+			}
+
+			td {
+				padding: 5px;
 			}
 		}
 
@@ -1118,13 +1130,14 @@ textarea {
 		display: inline-block;
 		color: black;
 		text-align: left;
-		font-family: 'Times New Roman';
 		margin-top: 3vh;
 	}
 
 	#citation {
 		text-indent: -40px;
 		margin-left: 40px;
+		font-family: Arial;
+		font-size: 12px;
 	}
 
 	.button-container {

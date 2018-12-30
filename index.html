@@ -80,10 +80,13 @@
       </div>
       <div>
         <h2>Current Version</h2>
-        <p>Version 1.0.4</p>
+        <p>Version 1.0.5</p>
         <p>Type: MINOR RELEASE</p>
-        <p>Released Aug 13, 2018</p>
+        <p>Released Dec 30, 2018</p>
         <h2>Version History</h2>
+        <h3>v 1.0.5 - December 30, 2018</h3>
+        <p>Addressed an issue from v 0.1.12 where location input fields were formated improperly on large screens.</p>
+        <p>Added option to change the output font family and size. </p>
         <h3>v 1.0.4 - August 13, 2018</h3>
         <p>Addressed an issue from v 0.1.12 where page numbers were required for digitally published journals.</p>
         <h3>v 1.0.3 - July 22, 2018</h3>
@@ -155,15 +158,32 @@
       </div>
       <div>
         <h2>Settings</h2>
+        <h3>Autosave</h3>
         <div class="input-block">
           <label class="switch">
             <input type="checkbox" name="autosave" checked>
             <span class="slider"></span>
           </label>
-          <label>Autosave</label>
+          <label class="switch-label">Autosave mode</label>
         </div>
         <p class="detail">When autosave is on, your data will be stored in your local storage. When you come back, any work you left will still be there. Note: this feature will not store data after your browsing session in incognito/private mode.</p>
         <button>Reset saved data</button>
+        <h3>Font</h3>
+        <div class="input-block">
+          <table>
+            <tbody>
+              <tr>
+                <td><label>Font Type</label></td>
+                <td><input type="text" name="font-type" id="font-type" placeholder="Arial"/></td>
+              </tr>
+              <tr>
+                <td><label>Font Size</label></td>
+                <td><input type="text" name="font-size" id="font-size" maxlength="2" size="2" placeholder="12" /> pt</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="detail">The default setting for the citation output's font is 12pt Arial. These settings can be changed here. To store these settings, enable autosave.</p>
       </div>
     </div>
   </div>

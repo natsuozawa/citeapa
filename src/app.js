@@ -1361,6 +1361,13 @@ $(document).ready(function() {
       localStorage.removeItem('CITEAPA_BEFORE');
       localStorage.removeItem('CITEAPA_TAB');
     },
+    logSettings: (obj) => {
+      if (!CITEAPA_SAVE) return;
+      let CITEAPA_SETTINGS = JSON.parse(localStorage.getItem('CITEAPA_SETTINGS'));
+      if (typeof CITEAPA_SETTINGS !== 'object') CITEAPA_SETTINGS = {};
+      CITEAPA_SETTINGS = Object.assign(CITEAPA_SETTINGS, obj);
+      localStorage.setItem('CITEAPA_SETTINGS', JSON.stringify(CITEAPA_SETTINGS));
+    },
     updateBefore: () => {
       if (!CITEAPA_SAVE) return;
       localStorage.setItem('CITEAPA_BEFORE', JSON.stringify({
@@ -1379,11 +1386,23 @@ $(document).ready(function() {
 
     if (localStorage.getItem('CITEAPA_SAVE') === 'false') {
       CITEAPA_SAVE = false;
-      if (localStorage.getItem('CITEAPA_SAVED')) localStorage.removeItem('CITEAPA_SAVED');
+      if (localStorage.getItem('CITEAPA_APP')) localStorage.removeItem('CITEAPA_APP');
       return;
     } else {
       localStorage.setItem('CITEAPA_SAVE', 'true');
       CITEAPA_SAVE = true;
+
+      if (localStorage.getItem('CITEAPA_SETTINGS')) {
+        let CITEAPA_SETTINGS = JSON.parse(localStorage.getItem('CITEAPA_SETTINGS'));
+        if (CITEAPA_SETTINGS.hasOwnProperty('fontType')) {
+          $('#citation').css('font-family', CITEAPA_SETTINGS.fontType + ', Arial');
+          $('#font-type').val(CITEAPA_SETTINGS.fontType);
+        } 
+        if (CITEAPA_SETTINGS.hasOwnProperty('fontSize')) {
+          $('#citation').css('font-size', CITEAPA_SETTINGS.fontSize +'px');
+          $('#font-size').val(CITEAPA_SETTINGS.fontSize);
+        }
+      }
 
       if (!localStorage.getItem('CITEAPA_APP')) {
         CITEAPA.resetStorage();
@@ -1582,5 +1601,17 @@ $(document).ready(function() {
 
   $('#content > div:last-child button').click(function() {
     CITEAPA.resetStorage();
+  });
+
+  $('#font-type').on('change', function() {
+    $('#citation').css('font-family', $(this).val() + ', Arial');
+    CITEAPA.logSettings({fontType: $(this).val()});
+  });
+
+  $('#font-size').on('change', function() {
+    const fontSize = Number($(this).val());
+    if (isNaN(fontSize) || fontSize <= 0) return;
+    $('#citation').css('font-size', fontSize + 'px');
+    CITEAPA.logSettings({fontSize: fontSize});
   });
 });

@@ -281,3 +281,9 @@ Addressed an issue where field labels were deleted sometimes in the contributor 
 
 -- v 1.0.4 -- August 13, 2018
 Addressed an issue from v 0.1.12 where page numbers were required for digitally published journals.
+
+-- v 1.0.5 -- December 30, 2018
+Addressed an issue from v 0.1.12 where location input fields were formated improperly on large screens.
+
+Added option to change the output font family and size. 
+Changed directory structure.
