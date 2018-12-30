@@ -948,7 +948,7 @@ textarea {
 		}
 
 		input[name="city"], input[name="country"] {
-			width: calc(50% - 75px);
+			width: calc(50% - calc(0.5vw + 75px));
 		}
 
 		input[name="city"] {
