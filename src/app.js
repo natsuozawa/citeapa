@@ -1399,7 +1399,7 @@ $(document).ready(function() {
           $('#font-type').val(CITEAPA_SETTINGS.fontType);
         } 
         if (CITEAPA_SETTINGS.hasOwnProperty('fontSize')) {
-          $('#citation').css('font-size', CITEAPA_SETTINGS.fontSize +'px');
+          $('#citation').css('font-size', CITEAPA_SETTINGS.fontSize +'pt');
           $('#font-size').val(CITEAPA_SETTINGS.fontSize);
         }
       }
@@ -1611,7 +1611,7 @@ $(document).ready(function() {
   $('#font-size').on('change', function() {
     const fontSize = Number($(this).val());
     if (isNaN(fontSize) || fontSize <= 0) return;
-    $('#citation').css('font-size', fontSize + 'px');
+    $('#citation').css('font-size', fontSize + 'pt');
     CITEAPA.logSettings({fontSize: fontSize});
   });
 });

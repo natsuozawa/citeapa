@@ -287,3 +287,7 @@ Addressed an issue from v 0.1.12 where location input fields were formated impro
 
 Added option to change the output font family and size. 
 Changed directory structure.
+
+-- v 1.0.6 -- January 4, 2019 
+Addressed an issue from v 1.0.5 where font size was not accurately set. 
+Updated licensing years. 
