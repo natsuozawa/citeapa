@@ -635,7 +635,7 @@ $(document).ready(function() {
           console.error(Errors.dateNoMonth)
         }
 
-        if (d.year.length <= 0 && d.month !== 'n.d.') {
+        if (d.year.length <= 0) {
           $('#date input[name="year"]').css('border-bottom', '2px solid #f25c32');
           pass = false;
           console.error(Errors.dateNoYear);

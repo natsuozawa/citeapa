@@ -291,3 +291,7 @@ Changed directory structure.
 -- v 1.0.6 -- January 4, 2019 
 Addressed an issue from v 1.0.5 where font size was not accurately set. 
 Updated licensing years. 
+
+-- v 1.0.7 -- March 3, 2020
+Addressed an issue where form validation was not properly done for publication date.
+Updated licensing years.
